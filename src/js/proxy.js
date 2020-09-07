@@ -11,7 +11,7 @@
     if (proxyConfigLS && proxyConfigLS !== '') {
         proxyCodeEditor.setValue(proxyConfigLS);
     } else {
-        proxyCodeEditor.setValue('Proxy:\n');
+        proxyCodeEditor.setValue('proxies:\n');
     }
 
     document.getElementById('ce-proxy-btn-validate').addEventListener('click', () => {
@@ -41,7 +41,7 @@
                 } else {
                     Modal(
                         '您的 Proxy 配置不符合要求！',
-                        `Proxy 配置必须包括 <code>Proxy:</code>，并且 <code>Proxy:</code> 下的内容不能为空！`
+                        `Proxy 配置必须包括 <code>proxies:</code>，并且 <code>proxies:</code> 下的内容不能为空！`
                     )
                 }
             } catch (e) {
@@ -124,7 +124,7 @@
                 if (onlineConfig.Proxy && onlineConfig.Proxy !== '') {
                     proxyCodeEditor.setValue(`Proxy:\n${jsyaml.dump(onlineConfig.Proxy)}`);
                 } else {
-                    throw new Error(`从 ${url} 下载的文件中没有找到 Proxy 字段或 Proxy 字段为空！`);
+                    throw new Error(`从 ${url} 下载的文件中没有找到 proxies 字段或 proxies 字段为空！`);
                 }
                 $('#online-helper').modal('hide');
             })
