@@ -25,7 +25,7 @@
                     <div class="card-body">
                         <h2 class="h4 text-center sk-mb-4">Proxy 配置</h2>
                         <div class="text-justify ce-card-docs">
-                            <p>在这里，您需要填充代理节点配置，注意代理配置第一行必须为 <code>Proxy:</code>。</p>
+                            <p>在这里，您需要填充代理节点配置，注意代理配置第一行必须为 <code>proxies:</code>。</p>
                             <p>Clash 支持的代理类型有 <code>ss</code>、<code>vmess</code>、<code>socks5</code>、<code>http</code> 和 <code>snell</code>。</p>
                             <p>您可以参考提供的样例配置直接在代码编辑器中直接添加，也可以使用 Clash Editor 提供的「添加向导」。</p>
                         </div>
@@ -255,7 +255,7 @@
                     </button>
                 </div>
                 <div class="modal-body" id="modal-body">
-                    <p>您可以使用「Clash 托管配置添加向导」从现有的 Clash 在线配置中获取节点信息。「托管配置添加向导」会通过 <code>cors-anywhere.herokuapp.com</code> 请求 URL，仅支持 YAML 格式的 Clash 托管配置，只有 <code>Proxy</code> 相关信息会被导入。</p>
+                    <p>您可以使用「Clash 托管配置添加向导」从现有的 Clash 在线配置中获取节点信息。「托管配置添加向导」会通过 <code>cors-anywhere.herokuapp.com</code> 请求 URL，仅支持 YAML 格式的 Clash 托管配置，只有 <code>proxies</code> 相关信息会被导入。</p>
                     <input type="text" class="form-control" id="proxy-online-url" placeholder="https://example.com/path/to/clash.yaml">
                 </div>
                 <div class="modal-footer">
